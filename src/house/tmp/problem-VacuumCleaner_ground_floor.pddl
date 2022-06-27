@@ -1,0 +1,7 @@
+;; problem file: problem-VacuumCleaner_ground_floor.pddl
+(define (problem VacuumCleaner_ground_floor)
+    (:domain VacuumCleaner_ground_floor)
+    (:objects vacuum_cleaner_ground_floor off on wine_cellar laundry utility_room basement_room hallway garage)
+	(:init (vacuum vacuum_cleaner_ground_floor) (state off) (state on) (room wine_cellar) (room laundry) (room utility_room) (room basement_room) (room hallway) (room garage) (not_clean laundry) (not_clean utility_room) (not_suck laundry) (not_suck utility_room) (adj wine_cellar hallway) (adj hallway wine_cellar) (adj laundry hallway) (adj hallway laundry) (adj utility_room hallway) (adj hallway utility_room) (adj garage hallway) (adj hallway garage) (adj basement_room hallway) (adj hallway basement_room) (in_room vacuum_cleaner_ground_floor wine_cellar) (not_people_in_room wine_cellar) (not_people_in_room laundry) (not_people_in_room utility_room) (not_people_in_room basement_room) (not_people_in_room hallway) (not_people_in_room garage) (set_status vacuum_cleaner_ground_floor on) (suck hallway) (clean hallway) (suck_and_clean vacuum_cleaner_ground_floor hallway) (suck basement_room) (clean basement_room) (suck_and_clean vacuum_cleaner_ground_floor basement_room) (suck garage) (clean garage) (suck_and_clean vacuum_cleaner_ground_floor garage) (suck wine_cellar) (clean wine_cellar) (suck_and_clean vacuum_cleaner_ground_floor wine_cellar))
+	(:goal (and (set_status vacuum_cleaner_ground_floor off)))
+)
